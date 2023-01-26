@@ -13,18 +13,26 @@ body{
 
 :root{
     --header-top-clr : black;
+    --hero-section-clr:#dadbf1;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 svg{
     filter: invert();
-    width: 8rem;
+    width: 5rem;
     max-height: 80px;
+    transition: all 0.3s ease-in-out;
     
+}
+
+svg:hover{
+    opacity: 0.7;
 }
 
 
 .topbar-outer{
     background-color:var(--header-top-clr);
+    position: fixed;
+    width: 100%;
 }
 
 .topbar-inner{
@@ -37,6 +45,43 @@ svg{
     display: flex;
     align-items: center;
 }
+
+
+.topbar-helpcenter{
+    border-left: 2px solid whitesmoke ;
+    border-radius: 2px;
+    padding-left: 1rem;
+}
+
+
+
+.topbar-helpcenter a:link{
+    color: whitesmoke;
+    text-decoration: none;
+    
+}
+
+.topbar-helpcenter a:visited{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.topbar-helpcenter a:hover{
+    color: whitesmoke;
+    text-decoration: underline;
+    opacity: 0.9;
+    
+}
+
+.topbar-helpcenter a:active{
+    color: whitesmoke;
+    text-decoration: underline;
+    
+    
+}
+
+
+
 
 .topbar-btns{
     display: flex;
@@ -72,12 +117,13 @@ a#sign:hover{
 }
 
 section.hero-section{
-    background-color: #dadbf1;
+    background-color: var(--hero-section-clr);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 5rem
+    padding:  10rem 5rem 5rem 5rem;
+    
     
 }
 
@@ -115,10 +161,72 @@ input[type="search"]::placeholder{
 
 }
 
-input[type="search"]:hover{
+input[type="search"]:hover,input[type="search"]:focus{
     border: 1px solid #1153ec;
+    box-shadow: 0 9px 24px rgba(0,0,0,0.4) ;
+
 
 }
+
+.container{
+    padding: 10% 10%;
+}
+
+.container > * {
+    font-size: 1.2rem;
+    letter-spacing: 1.5px;
+}
+
+.container > .items-container > h3 {
+    letter-spacing: -1.5px;
+}
+
+
+.items-container{
+    display: grid;
+    grid-template-columns: repeat(2,minmax(300px,1fr));
+    gap: 3rem;
+    padding: 0 5rem;
+    
+}
+
+.item-container{
+    display: flex;
+    gap: 1rem;
+}
+
+
+.item-container a:link{
+    color: purple;
+    text-decoration: none;
+    
+}
+
+.item-container a:visited{
+    color: purple;
+
+    text-decoration: none;
+}
+
+.item-container a:hover{
+    color: purple;
+    text-decoration: underline;
+    
+    
+}
+
+.item-container a:active{
+    text-decoration: underline;
+    
+    
+}
+
+.item-container img {
+    height: 5rem;
+    width: 5rem;
+    margin-top: 1.5rem;
+}
+
 
 
 
