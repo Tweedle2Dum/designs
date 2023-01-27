@@ -174,10 +174,10 @@ input[type="search"]:hover,input[type="search"]:focus{
 
 .container > * {
     font-size: 1.2rem;
-    letter-spacing: 1.5px;
+    
 }
 
-.container > .items-container > h3 {
+.container > .items-container  h3 {
     letter-spacing: -1.5px;
 }
 
@@ -186,6 +186,8 @@ input[type="search"]:hover,input[type="search"]:focus{
     display: grid;
     grid-template-columns: repeat(2,minmax(300px,1fr));
     gap: 3rem;
+    letter-spacing: -1px;
+    word-spacing: 3px;
     padding: 0 5rem;
     
 }
@@ -227,6 +229,71 @@ input[type="search"]:hover,input[type="search"]:focus{
     margin-top: 1.5rem;
 }
 
+
+
+footer{
+    background-color: var(--header-top-clr);
+
+}
+
+.footer-container {
+    display: flex;
+    color: whitesmoke;
+    padding: 2rem 3rem;
+    flex-wrap: wrap;
+    
+}
+
+
+.footer-column{
+    min-width: 200px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    flex: 0.5;
+    
+    
+}
+
+.footer-column > .links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    font-weight: 600;
+}
+
+a {
+    transition: all 0.3s ease-in;
+}
+
+.footer-column a:link {
+    text-decoration: none;
+    color:whitesmoke;
+}
+
+.footer-column a:hover {
+    color:whitesmoke;
+    text-decoration: underline;
+}
+
+.footer-column a:visited {
+    color: whitesmoke;
+}
+
+
+.right-column{
+    margin-left: auto;
+}
+
+.footer-logo{
+    margin-top: 5rem;
+}
+
+.copyright{
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    line-height: 24px;
+}
 
 
 
