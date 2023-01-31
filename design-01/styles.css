@@ -31,14 +31,14 @@ svg:hover{
 
 .topbar-outer{
     background-color:var(--header-top-clr);
-    position: fixed;
-    width: 100%;
+    
 }
 
 .topbar-inner{
     display: flex;
     color: whitesmoke;
     padding:1rem 2rem;
+    flex-wrap: wrap;
 }
 
 .logo-help-wrapper{
@@ -96,7 +96,7 @@ svg:hover{
     padding: 8px 22px;
     font-size: 1.5rem ;
     color: whitesmoke;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
 }
 
 a#submit{
@@ -134,8 +134,23 @@ section.hero-section{
     padding: 0 2rem;
 }
 
+@media (max-width:901px){
+
+    .hero-section-text-content {
+        font-size: 4rem;
+    }
+
+}
+
+@media (max-width:740px){
+    .hero-section-text-content{
+        padding: 0 0;
+    }
+
+}
+
 .inner-hero{
-    margin: 0 2rem;
+    margin: 0  ;
 }
 
 form.hero-section-input{
@@ -188,8 +203,14 @@ input[type="search"]:hover,input[type="search"]:focus{
     gap: 3rem;
     letter-spacing: -1px;
     word-spacing: 3px;
-    padding: 0 5rem;
+    padding: 0 0rem;
     
+}
+
+@media (max-width:740px){
+    .items-container{
+        grid-template-columns: 1fr;
+    }
 }
 
 .item-container{
